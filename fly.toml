@@ -1,0 +1,19 @@
+
+# fly.toml file for deployment
+app = "quran-bot"  # اسم التطبيق (تأكد من أنه نفس الاسم الذي تستخدمه في Fly.io)
+
+[env]
+  BOT_TOKEN = "7626331564:AAFd_lfdvfZfHAVUGU19iDYH5zgV5lAkMGM"  # التوكن الخاص بالبوت
+  API_ID = "14517234"  # قم بوضع API_ID الخاص بك
+  API_HASH = "f72e8404a1842f443db36a4ea0c281db"  # قم بوضع API_HASH الخاص بك
+
+[build]
+  dockerfile = "Dockerfile"  # ملف Dockerfile الذي سيستخدمه Fly.io للبناء
+
+[[services]]
+  internal_port = 8080  # المنفذ الذي يستمع عليه التطبيق داخليًا
+  protocol = "tcp"      # البروتوكول المستخدم
+
+  [[services.ports]]
+    port = 80   # المنفذ الذي سيستقبل الطلبات الخارجية
+    handlers = ["http"]
