@@ -1,6 +1,6 @@
 
 # fly.toml file for deployment
-app = "quran-bot-5"  # اسم التطبيق (تأكد من أنه نفس الاسم الذي تستخدمه في Fly.io)
+app = "quran-boto"  # اسم التطبيق (تأكد من أنه نفس الاسم الذي تستخدمه في Fly.io)
 
 [env]
   BOT_TOKEN = "7626331564:AAFd_lfdvfZfHAVUGU19iDYH5zgV5lAkMGM"  # التوكن الخاص بالبوت
